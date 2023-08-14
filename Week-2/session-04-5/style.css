@@ -1,0 +1,22 @@
+body{
+    padding:2%;
+}
+main{
+    margin : 20px 0;
+}
+.rating i {
+    font-size: 46px;
+    color: #fcd53f;
+  }
+  nav {
+display:flex;
+flex-direction: row;
+flex-wrap: nowrap;
+gap:20px;
+  }
+  #add-review div{
+    margin-bottom: 20px;
+  }
+  #contact{
+    font-style: italic;
+  }
