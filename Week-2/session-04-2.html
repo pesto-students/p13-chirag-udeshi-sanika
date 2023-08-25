@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Illustration of HTML Form" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sanika Patwardhan" />
+    <title>Form for Creating Birthday Message</title>
+  <style>
+    form div{
+        display:flex;
+        justify-content: center;
+        margin-bottom:20px;
+        width:50%;
+    }
+
+form div label{
+    width:20%;
+}
+form div input, form div textarea{
+    width:80%;
+}
+    
+  </style>
+</head>
+
+<body>
+    <h1>Happy Birthday Message Creator</h1>
+  <form action="#" method="post" enctype="multipart/form-data">
+    
+    <div id="messageSection">
+      <label for="message">Message?</label>
+      <input type="text" id="message" name="message" placeholder="Happy Birthday!" required>
+    </div>
+    <div id="emailSection">
+      <label for="email">Email address?</label>
+      <input type="text" id="email" name="email" pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0- 9-]+)*" required placeholder="name@domain.com" >
+    </div>
+    <div id="dateSection">
+      <label for="date">Date to send?</label>
+      <input type="date"  id="date" name="date"
+        ></input>
+    </div>
+    <div id="colorSection">
+      <label for="color">Message color?</label>
+      <input type="color"  id="color" name="color"
+        ></input>
+    </div>
+    <div id="blinksSection">
+      <label for="blicks">Number of blinks?</label>
+      <input type="number"  id="blinks"  name="blinks" value="0" min="0" max="10"
+        ></input>
+    </div>
+    <div id="volumeSection">
+      <label for="volume">Music volume?</label>
+      <input type="range"  id="volume" name="volume" value="20" min="0" max="50"
+        ></input>
+    </div>
+  
+    
+      <button type="submit" value="Submit" id="submit-button">Send birthday message</button>
+  
+  </form>
+</body>
+
+</html>

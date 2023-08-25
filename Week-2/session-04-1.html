@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Illustration of HTML Form" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sanika Patwardhan" />
+    <title>Form for Joining a Social Network</title>
+  <style>
+    form div{
+        display:flex;
+        justify-content: center;
+        margin-bottom:20px;
+        width:50%;
+    }
+
+form div label{
+    width:20%;
+}
+form div input, form div textarea{
+    width:80%;
+}
+    
+  </style>
+</head>
+
+<body>
+    <h1>Join a social network</h1>
+  <form action="#" method="post" enctype="multipart/form-data">
+    
+    <div id="nameSection">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" required>
+    </div>
+    <div id="emailSection">
+      <label for="email">Email address</label>
+      <input type="email" id="email" required>
+    </div>
+    <div id="aboutSection">
+      <label for="about">About you</label>
+      <textarea  id="about" cols="50" rows="3"
+        ></textarea>
+    </div>
+    <div id="imageSection">
+      <label for="userImage">Photo</label>
+      <input type="file" id="userImage" accept=".jpg, .png, .jpeg">
+    </div>
+    
+      <input type="submit" value="Submit" id="submit-button">
+  
+  </form>
+</body>
+
+</html>
