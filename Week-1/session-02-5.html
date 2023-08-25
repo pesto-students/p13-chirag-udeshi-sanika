@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Illustration of HTML Form" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sanika Patwardhan" />
+    <title>Form for Social Media Registration</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form, form div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+     
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <h1>Please provide your details</h1>
+    <div id="nameSection">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Jon Doe" required>
+    </div>
+    <div id="emailSection">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="jondoe@xyz.com" required>
+    </div>
+    <div id="aboutSection">
+      <label for="shortDescription">Short description</label>
+      <textarea  id="about" cols="50" rows="3"
+        placeholder="Tell us a little about yourself."></textarea>
+    </div>
+    <div id="uploadSection">
+      <label for="uploadUserImage">Your photo</label>
+      <input type="file" id="picture" accept=".jpg, .png, .jpeg">
+    </div>
+    <div id="submitSection">
+      <input type="submit" value="Submit" id="submit-button">
+    </div>
+  </form>
+</body>
+
+</html>
