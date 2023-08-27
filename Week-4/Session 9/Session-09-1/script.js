@@ -6,8 +6,9 @@ const divideArray = (nums) => {
       if (element % 2 === 0) evenNums.push(element);
       else oddNums.push(element);
     });
-    evenNums.sort((a, b) => a - b);
-    oddNums.sort((a, b) => a - b);
+    //evenNums.sort((a, b) => a - b);
+    evenNums.sort();
+    oddNums.sort();
     console.log("Even numbers : ");
     evenNums.length === 0 ? console.log("None") : console.log(evenNums);
     console.log("Odd numbers : ");

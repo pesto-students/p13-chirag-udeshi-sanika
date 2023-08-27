@@ -1,5 +1,4 @@
 const isStrongPassword = (password) => {
-  debugger;
   if (password.length > 7) {
     if (!password.toLowerCase().includes("password")) {
       let i;
