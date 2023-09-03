@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Restaurant Reviews - Add reviews</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Restaurant Reviews</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="add-review.html">Add Review</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Add Review</h2>
+
+      <form
+        action="#"
+        method="post"
+        enctype="multipart/form-data"
+        id="add-review"
+      >
+        <div id="nameField" class="form-field">
+          <label for="name">Name? </label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div id="restaurantField" class="form-field">
+          <label for="restaurant">Restaurant </label>
+          <select id="restaurant" name="restaurant" required>
+            <option value="" disabled selected>Choose an option</option>
+            <option value="main-street-cafe">Main Street Cafe</option>
+            <option value="greek-house">Greek House</option>
+          </select>
+        </div>
+        <div id="dateField" class="form-field">
+          <label for="date">Date of Visit? </label>
+          <input type="date" id="date" required />
+        </div>
+        <div class="form-field" id="ratingField">
+          <label for="rating">Rating? </label>
+          <input type="number" min="0" max="5" id="rating" required />
+        </div>
+        <div id="detailsField" class="form-field">
+          <label for="details">Details? </label>
+          <textarea name="details" id="details" rows="4"> </textarea>
+        </div>
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+    </main>
+
+    <footer>&copy; 2023 Restaurant Reviews</footer>
+  </body>
+</html>
