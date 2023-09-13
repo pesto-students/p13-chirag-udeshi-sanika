@@ -50,6 +50,7 @@ class SavingsAccount extends BankAccount {
       return "Withdrawal failed. Insufficient balance.";
     } else this.withdrawAmount(amount);
   }
+
 }
 
 //Creating saving account

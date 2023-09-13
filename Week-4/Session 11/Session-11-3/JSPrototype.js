@@ -8,8 +8,8 @@ class Vehicle {
   }
 }
 
-Vehicle.prototype.getDetails = () => {
-  debugger;
+Vehicle.prototype.getDetails = function() {
+console.log(this);
   return (
     "Vehicle Make is " +
     this.make +
@@ -20,7 +20,7 @@ Vehicle.prototype.getDetails = () => {
   );
 };
 
-class Car extends Vehicle {
+ class Car extends Vehicle {
   constructor(make, model, year, numDoors) {
     super(make, model, year);
     this.numDoors = numDoors;
@@ -28,7 +28,7 @@ class Car extends Vehicle {
   getDetails() {
     return "Number of doors are " + this.numDoors;
   }
-}
+} 
 
 let vehicle = new Vehicle("Maruti", "Ritz", 2012);
 let car = new Car("Hyundai", "Verna", 2017, 4);
