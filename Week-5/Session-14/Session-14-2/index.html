@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function displayWindowProperties() {
+        console.log(`User agent string : ${navigator.userAgent}`);
+        console.log(`Screen width and height : ${screen.width, screen.height}`);
+        console.log(`Current URL and path : ${location.href, location.pathname}`);
+       
+
+        localStorage.setItem("Theme", "Dark");
+
+        sessionStorage.setItem("Color", "Black");
+
+        console.log(`Data stored in local Storage Theme: ${localStorage.getItem("Theme")}`);
+        console.log(`Data stored in session Storage Color: ${sessionStorage.getItem("Color")}`);
+      }
+
+      displayWindowProperties();
+    </script>
+  </body>
+</html>
