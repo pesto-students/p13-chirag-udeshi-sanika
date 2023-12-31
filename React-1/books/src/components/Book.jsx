@@ -1,4 +1,6 @@
-import React from "react";
+import React, {memo} from "react";
+import BookDetails from "./BookDetails";
+
 
 const Book = (props) => {
   return (
@@ -7,10 +9,8 @@ const Book = (props) => {
         "background-color": "#d5d5f5", 'padding': "2%",'margin-top' : '10px'
       }}
     >
-      <h3>{props.title}</h3>
-      <p>Author: {props.author}</p>
-      <p>Year: {props.year}</p>
+     <BookDetails title={props.title} author={props.author} year={props.year}/>
     </div>
   );
 };
-export default Book;
+export default memo(Book);
