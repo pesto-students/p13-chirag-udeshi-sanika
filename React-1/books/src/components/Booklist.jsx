@@ -1,32 +1,54 @@
-import React , {Component} from 'react';
-import Book from './Book';
+import React, { Component } from "react";
+import Book from "./Book";
 
 class Booklist extends Component {
-    constructor(){
-        super();
-        this.books = [
-            { title: 'Book 1', author: 'Author 1', year: 2020 },
-            { title: 'Book 2', author: 'Author 2', year: 2018 },
-            { title: 'Book 3', author: 'Author 3', year: 2022 },
-            
-          ];
-    }
-   
-    render (){
-        return (
-            <div>
-                <h1>List of Books</h1>
-                <ul style={{'list-style-type': 'none'}}>
-                    {
-                        this.books.map(book => 
-                            (<li><Book title={book.title} author={book.author} year={book.year}/></li>)
-                        )
-                    }
-                </ul>
-                
-            </div>
-        );
-    }
- 
-};
-export default Booklist
+  constructor(props) {
+    super(props);
+  }
+
+  deleteClickHandler = (book) => {
+    this.props.deleteBook(book);
+  };
+
+  render() {
+    return (
+      <div className="half-desktop">
+        <h1>List of Books</h1>
+        <ul style={{ listStyleType: "none" }}>
+          {this.props.books.length > 0 ? (
+            this.props.books.map((book) => (
+              <li
+                key={book.title + Math.random()}
+                style={{
+                  backgroundColor: "#d5d5f5",
+                  padding: "2%",
+                  marginTop: "10px",
+                }}
+              >
+                <Book
+                  id={book.title + Math.random()}
+                  title={book.title}
+                  author={book.author}
+                  year={book.year}
+                  genre={book.genre}
+        description={book.description}
+                  deleteBook={this.deleteBook}
+                />
+                <button
+                  onClick={() => {
+                    this.deleteClickHandler(book);
+                  }}
+                >
+                  Delete
+                </button>
+              </li>
+            ))
+          ) : (
+            <p>Book List is currently empty</p>
+          )}
+        </ul>
+      </div>
+    );
+  }
+}
+export default Booklist;
