@@ -32,7 +32,7 @@ class Booklist extends Component {
                   year={book.year}
                   genre={book.genre}
         description={book.description}
-                  deleteBook={this.deleteBook}
+                  
                 />
                 <button
                   onClick={() => {
