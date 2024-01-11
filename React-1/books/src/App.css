@@ -1,0 +1,16 @@
+.main {
+  text-align: center;
+  display:flex;
+  padding :3%;
+}
+
+.main.light{
+  background-color: white;
+}
+.main.dark{
+  background-color: black;
+  color : white
+}
+.half-desktop{
+  width: 50%;
+}

@@ -1,0 +1,11 @@
+li {
+  padding: 2%;
+  margin-top: 10px;
+}
+.light-li {
+  background-color: #d5d5f5;
+}
+.dark-li {
+  background-color: beige;
+  color:black;
+}
