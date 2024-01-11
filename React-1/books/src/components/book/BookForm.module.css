@@ -8,11 +8,14 @@ form div{
     justify-items: start;
     margin-bottom : 2%;
 }
-label{
+.book-form label{
     text-align : right;
 }
-input{
+.book-form input{
     height : 40px;
     width:100%;
+}
+.dark .book-form input{
+    background-color: beige;
 }
 

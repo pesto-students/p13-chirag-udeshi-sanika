@@ -1,31 +1,30 @@
+import "./App.css";
+import React, { useState } from "react";
+import Booklist from "./components/book/Booklist";
+import ThemeSwitcher from './components/theme/ThemeSwitcher';
+import {createContext} from 'react';
 
-import './App.css';
-import React , {useState} from 'react';
-import BookForm from './components/BookForm';
-import Booklist from './components/Booklist';
-
-
+export const ThemeContext = createContext();
 function App() {
- 
-  const [books, setBooks] = useState([]);
-  const sendNewBookDetails = (newBook) => {
-    setBooks((prevState) => {
-      return [...prevState, newBook]
-      
-    });
-  }
 
-  const deleteBook = (book) => {
-    debugger;
-    let index = books.indexOf(book);
-    books.splice(index,1)
-    setBooks(books);
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    if(theme === 'light')
+      setTheme('dark');
+    else
+      setTheme('light');
   }
   return (
-    <div className="main">
-      <BookForm addNewBook={sendNewBookDetails}/>
-     <Booklist books={books} deleteBook={deleteBook}/>
+    <> 
+    <ThemeSwitcher toggleTheme={toggleTheme}/>
+    <ThemeContext.Provider value={theme} >
+       <div className={`main ${theme}`}>
+      <Booklist />
     </div>
+    </ThemeContext.Provider>
+    </>
+
   );
 }
 
