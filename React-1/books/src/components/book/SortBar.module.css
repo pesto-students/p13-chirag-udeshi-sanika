@@ -1,0 +1,7 @@
+.sortBar{
+    display:flex;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    margin-top:20px;
+}
