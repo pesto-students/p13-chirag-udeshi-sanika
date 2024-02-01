@@ -1,5 +1,5 @@
 function kthElement(arr1,arr2,k){
-    debugger;
+    
     let n = arr1.length;
     let m = arr2.length;
 
@@ -47,4 +47,5 @@ function kthElement(arr1,arr2,k){
     }
 }
 
-console.log(kthElement([1,3,7,8,9],[4,10,16],3))
+//console.log(kthElement([1,3,7,8,9],[4,10,16],3))
+console.log(kthElement([1,2],[3,4],2))
