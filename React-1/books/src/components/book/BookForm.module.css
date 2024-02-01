@@ -1,0 +1,21 @@
+.book-form{
+    text-align : left;
+ }
+form div{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-column-gap: 2%;
+    justify-items: start;
+    margin-bottom : 2%;
+}
+.book-form label{
+    text-align : right;
+}
+.book-form input{
+    height : 40px;
+    width:100%;
+}
+.dark .book-form input{
+    background-color: beige;
+}
+
